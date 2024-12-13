@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolishBoiYT's Website</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="windowdim" style="display: none;"></div>
+    <img class="logo" src="images/mc.png">
+    <span class="splashtext"></span>
+    <div class="mc-menu">
+        <button class="mc-button full" onclick="showFriends()">
+            <span class="title">Friends</span>
+        </button>
+        <button class="mc-button full" onclick="showSocials()">
+            <span class="title">Socials</span>
+        </button>
+        <button class="mc-button full" onclick="showProjects()">
+            <span class="title">Projects</span>
+        </button>
+
+        <div class="double">
+            <button class="mc-button full" onclick="window.location.reload()">
+                <span class="title">Reload</span>
+            </button>
+            <button class="mc-button full" onclick="window.close()">
+                <span class="title">Exit</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="window friends" style="display: none; text-align: center;">
+        <h2>My cool friends!</h2><br><br>
+        user0 - "mail0"<br>
+        winbo - "dumbfuck from poland"<br>
+        orca - "chatgtp is racist"<br>
+        IanMStudios - "Welcome to PolishBoi's Github Page!" (yes he said that)<br>
+        CITPMHE - "No"<br>
+        Windows11X - "the most epic website of all1!1!1! wowzers!1!1!1!11"<br><br>
+        <button class="mc-button full" onclick="showFriends()">
+            <span class="title">Close</span>
+        </button>
+    </div>
+
+    <div class="window socials" style="display: none; text-align: center;">
+        <h2>My socials!</h2><br><br>
+        <div>
+            <a href="https://www.youtube.com/@TheEpicPolishBoiYT">YouTube Channel</a><br>
+            <a href="https://discord.gg/yHg66vgwXvT">Discord Server</a><br>
+            <a href="https://guilded.gg/polishboiyt-py">Guilded Server</a>
+        </div>
+        <br>
+        <button class="mc-button full" onclick="showSocials()">
+            <span class="title">Close</span>
+        </button>
+    </div>
+
+    <div class="window projects" style="display: none; text-align: center; width: 80%; margin: 0 auto; background: #333; border-radius: 10px; padding: 20px;">
+        <h2 style="color: #f8e71c; text-shadow: 2px 2px 0 #000;">My Projects!</h2>
+        <div style="color: white; text-shadow: 1px 1px 0 #000;">
+            <h4>1. Blue Screen of Click</h4>
+            <p>BSoD clicker basically.</p>
+            <a href="https://github.com/PolishBoiYT/Blue-Screen-of-Click" style="color: #f8e71c;">Source Code</a><br>
+            <a href="https://github.com/PolishBoiYT/Blue-Screen-of-Click/releases/download/BlueScreenOfClick/Blue-Screen-of-Click.exe" style="color: #f8e71c;">Download</a><br><br>
+
+            <h4>2. Webpad</h4>
+            <p>Notepad in HTML! (<a href="polishboiyt.github.io">previous website design</a>)</p>
+            <a href="https://polishboiyt.github.io/webpad/" style="color: #f8e71c;">Visit</a><br><br>
+
+            <h4>3. polishboiyt-utils (PyPi)</h4>
+            <p>imma just give u the link: <a href="https://pypi.org/project/polishboiyt-utils">linky link</a><br>i also have another pypi library called PyTaskMGR but uhh chatgdb so uhh <a href="https://pypi.org/project/PyTaskMGR/">here u go</a></a></p>
+        </div>
+        <br>
+        <button class="mc-button full" onclick="showProjects()">
+            <span class="title">Close</span>
+        </button>
+    </div>
+</body>
+</html>

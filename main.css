@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/* MOST OF THE CSS WAS MADE BY JOEX!! https://codepen.io/joexmdq/pen/EOMLzg
+CHATGPT MADE IT READLABLE (i suck at css, im what the french calls "le dogshit")
+THANK YOU CHATGPT AND JOEX! */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Minecraftia;
+    src: url("fonts/mcseven.ttf");
+}
+
+html {
+    font: 12pt 'Minecraftia', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    background-image: url('https://i.ibb.co/bH3JY30/IE1G7Lr.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.mc-menu {
+    --btn-size: 30pt;
+    display: grid;
+    grid-template-columns: var(--btn-size) calc(var(--btn-size) * 10) var(--btn-size);
+    grid-template-rows: repeat(3, var(--btn-size)) 16px var(--btn-size);
+    grid-template-areas:
+        '.       first      .'
+        '.       second     .'
+        '.       third      .'
+        '.       .          .'
+        'lang    fourth    .';
+    grid-gap: 8px;
+}
+
+.mc-menu .mc-button:nth-child(1) { grid-area: first; }
+.mc-menu .mc-button:nth-child(2) { grid-area: second; }
+.mc-menu .mc-button:nth-child(3) { grid-area: third; }
+
+.double {
+    grid-area: fourth;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'left right';
+    grid-gap: 8px;
+}
+
+.double .mc-button:nth-child(1) { grid-area: left; }
+.double .mc-button:nth-child(2) { grid-area: right; }
+
+.mc-menu .mc-button:nth-child(5) { grid-area: lang; }
+
+.mc-button {
+    font-family: Minecraftia;
+    font-size: 14pt;
+    height: var(--btn-size);
+    width: calc(var(--btn-size) * 10);
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+    image-rendering: pixelated;
+    border: 2px solid #000;
+}
+
+.mc-button:hover .title {
+    background-color: rgba(100, 100, 255, .45);
+    text-shadow: 2px 2px #202013CC;
+    color: #FFFFA0;
+}
+
+.mc-button:active .title {
+    box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
+}
+
+.mc-button .title {
+    width: 100%;
+    height: 100%;
+    padding-bottom: .3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DDD;
+    text-shadow: 2px 2px #000A;
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+.mc-button.full {
+    width: 100%;
+    height: 100%;
+}
+
+.mc-button.lang img {
+    width: 26px;
+    height: 26px;
+}
+
+.mc-button.lang .title {
+    padding-bottom: 0;
+}
+
+.logo {
+    width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.splashtext {
+    font-size: 24px;
+    color: yellow;
+    text-shadow: 2px 2px 0px black;
+    position: absolute;
+    top: 125px;
+    margin-left: 250px;
+    left: 50%;
+    transform: translateX(-50%) rotateX(45deg);
+    text-align: center;
+    animation: boing 0.25s infinite alternate;
+}
+
+@keyframes boing {
+    from {
+        transform: translateX(-50%) scale(1.1) rotate(-15deg);
+    }
+    to {
+        transform: translateX(-50%) scale(1) rotate(-15deg);
+    }
+}
+
+.windowdim {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 999;
+}
+
+.window {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+    image-rendering: pixelated;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: calc(35% + 5px);
+    height: auto;
+    padding: 10px;
+}
